@@ -35,21 +35,53 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
+1.Start the program.
 
-/* write all the steps invloved */
+2.Define 8 input lines — typically D0 to D7.
+
+3.Ensure only one input line is high (1) at a time (priority encoders may allow multiple).
+
+4.Determine the position of the high input:
+
+5.If D0 is high → output 000
+
+6.If D1 is high → output 001
+
+...
+
+If D7 is high → output 111
+
+Assign the corresponding 3-bit binary value to the output (Y2, Y1, Y0).
+
+End the program.
 
 **PROGRAM**
 
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:Priyadharshini G RegisterNumber:212224230209
 */
+```
+module EX5(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a,b,c;
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
+endmodule
+```
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+![image](https://github.com/user-attachments/assets/d93895fd-82e5-4a64-aef2-1b8090157d58)
+
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+![image](https://github.com/user-attachments/assets/e1c5078a-79fe-41fc-b157-390cb6eebf91)
+
 
 **RESULTS**
+
+Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables was implemented successfully.
 
 
 
