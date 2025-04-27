@@ -59,10 +59,8 @@ End the program.
 
 **PROGRAM**
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+ Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by:Priyadharshini G RegisterNumber:212224230209
-*/
 ```
 module EX5(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
 input y0,y1,y2,y3,y4,y5,y6,y7;
